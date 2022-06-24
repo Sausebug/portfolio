@@ -1,0 +1,269 @@
+body{
+    max-width: 100%;
+    display: grid;
+    grid-template-areas: "";
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(img/bg1.jpg);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media screen and (min-width: 760px){
+    .header{
+        display: grid;
+        grid-template-areas: "headerName headerYearsOld";
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+
+        background-color: #FFFFFF10;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        color: aliceblue;
+    }
+    .header .name{
+        grid-area: headerName;
+        text-align: center;
+    }
+    .header .yearsOld{
+        grid-area: headerYearsOld;
+        text-align: center;
+    }
+
+    .mainContent{
+        display: grid;
+        grid-template-areas:"myPhoto contacts" "aboutMe aboutMe" "skills skills";
+        grid-template-columns: 2fr 1fr;
+    }
+    .mainContent .myPhoto{
+        display: grid;
+        place-items: center;
+    }
+    .mainContent .myPhoto img{
+        width: 400px;
+        height: 600px;
+        grid-area: myPhoto;
+    }
+
+    .contacts{
+        display: grid;
+        grid-template-areas: "git"
+        "telegramm"
+        "mail";
+        grid-area: contacts;
+    }
+    .contacts a{
+        text-decoration: none;
+        color: aliceblue;
+        border-radius: 5px;
+        font-size: 20px;
+        background: blueviolet;
+        line-height: 21px;
+        padding: 14 35px;
+    }
+    .contacts a:hover {
+        color: blueviolet;
+        transition: ease-out 0.2s;
+    }
+    .contacts-git{
+        grid-area: git;
+    }
+    .contacts-git img{
+        height: 20px;
+        width: 20px;
+    }
+    .contacts-telegramm{
+        grid-area: telegramm;
+    }
+    .contacts-telegramm img{
+        height: 20px;
+        width: 20px;
+    }
+    .contacts-mail{
+        grid-area: mail;
+    }
+    .contacts-mail img{
+        width: 20px;
+        height: 20px;
+    }
+
+    .aboutMe{
+        grid-area: aboutMe;
+        text-align: center;
+
+        background-color: #FFFFFF10;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+    
+        color: aliceblue;
+        font-size: 18px;
+        line-height: 22px;
+
+    }
+    .skills{
+        grid-area: skills;
+        text-align: center;
+        display: grid;
+        grid-template-areas: "skills-header" "skills-image";
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .skills-header{
+        grid-area: skills-header;
+        text-align: center;
+
+        background-color: #FFFFFF10;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        color: aliceblue;
+    }
+    .skills-image{
+        display: grid;
+        grid-template-areas: "skills-image-vscode skills-image-visualstudio skills-image-adobeillustrator skills-image-figma";
+    }
+    .skills-image img{
+        grid-area: skills-image;
+        width: 100px;
+        height: 100px;
+    }
+    .skills-image-vscode{
+        grid-area: skills-image-vscode;
+    }
+    .skills-image-visualstudio{
+        grid-area: skills-image-visualstudio;
+    }
+    .skills-image-adobeillustrator{
+        grid-area: skills-image-adobeillustrator;
+    }
+    .skills-image-figma{
+        grid-area: skills-image-figma;
+    }
+}
+
+@media screen and (max-width: 759px){
+    .header{
+        display: grid;
+        grid-template-areas: "headerName"
+        "headerYearsOld";
+        grid-template-columns: 1fr;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+
+        background-color: #FFFFFF10;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        color: aliceblue;
+    }
+    .header .name{
+        grid-area: headerName;
+        text-align: center;
+    }
+    .header .yearsOld{
+        grid-area: headerYearsOld;
+        text-align: center;
+    }
+
+    .mainContent{
+        display: grid;
+        grid-template-areas:"myPhoto" "contacts" "aboutMe" "skills";
+        grid-template-columns: 1fr;
+        place-items: center;
+        max-width: 1280px;
+    }
+    .mainContent .myPhoto img{
+        width: 200px;
+        height: 300px;
+        grid-area: myPhoto;
+        display: flex;
+    }
+
+    .contacts{
+        display: grid;
+        grid-template-areas: "git"
+        "telegramm"
+        "mail";
+        grid-template-columns: 1fr;
+        text-align: center;
+        grid-area: contacts;
+    }
+    .contacts a{
+        text-decoration: underline;
+        color: aliceblue;
+    }
+    .contacts-git{
+        grid-area: git;
+    }
+    .contacts-git img{
+        height: 20px;
+        width: 20px;
+    }
+    .contacts-telegramm{
+        grid-area: telegramm;
+    }
+    .contacts-telegramm img{
+        height: 20px;
+        width: 20px;
+    }
+    .contacts-mail{
+        grid-area: mail;
+    }
+    .contacts-mail img{
+        width: 20px;
+        height: 20px;
+    }
+
+    .aboutMe{
+        grid-area: aboutMe;
+        text-align: center;
+
+        background-color: #FFFFFF10;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+    
+        color: aliceblue;
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .skills{
+        grid-area: skills;
+        text-align: center;
+        display: grid;
+        grid-template-areas: "skills-header" "skills-image";
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .skills-header{
+        grid-area: skills-header;
+        text-align: center;
+
+        background-color: #FFFFFF10;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        color: aliceblue;
+    }
+    .skills-image{
+        display: grid;
+        grid-template-areas: "skills-image-vscode skills-image-visualstudio skills-image-adobeillustrator skills-image-figma";
+    }
+    .skills-image img{
+        grid-area: skills-image;
+        width: 100px;
+        height: 100px;
+    }
+    .skills-image-vscode{
+        grid-area: skills-image-vscode;
+    }
+    .skills-image-visualstudio{
+        grid-area: skills-image-visualstudio;
+    }
+    .skills-image-adobeillustrator{
+        grid-area: skills-image-adobeillustrator;
+    }
+    .skills-image-figma{
+        grid-area: skills-image-figma;
+    }
+}
